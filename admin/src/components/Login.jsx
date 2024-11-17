@@ -5,8 +5,8 @@ import { backendUrl } from "./Layout";
 import { toast } from "react-toastify";
 
 export default function Login({ setToken }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("admin@clothix.com");
+  const [password, setPassword] = useState("admin123");
 
   async function onSubmitHandler(e) {
     try {

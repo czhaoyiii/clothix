@@ -27,42 +27,42 @@ export default function Add() {
   // Add new listing
   async function onSubmitHandler(e) {
     e.preventDefault();
-    try {
-      const formData = new FormData();
+    // try {
+    //   const formData = new FormData();
 
-      formData.append("name", name);
-      formData.append("description", description);
-      formData.append("price", price);
-      formData.append("category", category);
-      formData.append("subCategory", subCategory);
-      formData.append("sizes", JSON.stringify(sizes));
-      formData.append("bestseller", bestseller);
+    //   formData.append("name", name);
+    //   formData.append("description", description);
+    //   formData.append("price", price);
+    //   formData.append("category", category);
+    //   formData.append("subCategory", subCategory);
+    //   formData.append("sizes", JSON.stringify(sizes));
+    //   formData.append("bestseller", bestseller);
 
-      image1 && formData.append("image1", image1);
-      image2 && formData.append("image2", image2);
-      image3 && formData.append("image3", image3);
-      image4 && formData.append("image4", image4);
+    //   image1 && formData.append("image1", image1);
+    //   image2 && formData.append("image2", image2);
+    //   image3 && formData.append("image3", image3);
+    //   image4 && formData.append("image4", image4);
 
-      const res = await axios.post(backendUrl + "/api/product/add", formData, {
-        headers: { token },
-      });
+    //   const res = await axios.post(backendUrl + "/api/product/add", formData, {
+    //     headers: { token },
+    //   });
 
-      if (res.data.success) {
-        toast.success(res.data.message);
-        setName("");
-        setDescription("");
-        setPrice("");
-        setImage1(false);
-        setImage2(false);
-        setImage3(false);
-        setImage4(false);
-      } else {
-        toast.error(res.data.message);
-      }
-    } catch (error) {
-      console.log(error);
-      toast.error(error.message);
-    }
+    //   if (res.data.success) {
+    //     toast.success(res.data.message);
+    //     setName("");
+    //     setDescription("");
+    //     setPrice("");
+    //     setImage1(false);
+    //     setImage2(false);
+    //     setImage3(false);
+    //     setImage4(false);
+    //   } else {
+    //     toast.error(res.data.message);
+    //   }
+    // } catch (error) {
+    //   console.log(error);
+    //   toast.error(error.message);
+    // }
   }
 
   return (
@@ -303,7 +303,15 @@ export default function Add() {
       </div>
 
       {/* Add Button to submit */}
-      <button type="submit" className="w-28 py-3 mt-4 bg-black text-white">
+      <button
+        // type="submit"
+        onClick={() =>
+          toast.error(
+            "Feature is disabled. I don't want people to bombard my DB"
+          )
+        }
+        className="w-28 py-3 mt-4 bg-black text-white"
+      >
         ADD
       </button>
     </form>

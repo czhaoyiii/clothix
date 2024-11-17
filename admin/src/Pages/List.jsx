@@ -79,7 +79,12 @@ export default function List() {
             </p>
             <div className="flex justify-center">
               <img
-                onClick={() => removeProduct(product._id)}
+                onClick={() =>
+                  toast.error(
+                    "Feature is disabled. I don't want people to delete my DB"
+                  )
+                }
+                // onClick={() => removeProduct(product._id)}
                 className="w-5 cursor-pointer"
                 src={bin}
                 alt=""

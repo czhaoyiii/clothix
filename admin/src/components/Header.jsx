@@ -19,10 +19,14 @@ export default function Header({ setToken }) {
         >
           Logout
         </button>
-        <Link className="flex items-center">
+        <a
+          href="https://clothix-frontend.vercel.app/"
+          target="_blank"
+          className="flex items-center cursor-pointer"
+        >
           <p className="hover:underline text-sm sm:text-base">Go to Shop</p>
           <img className="h-4 pl-2" src={arrow} alt="" />
-        </Link>
+        </a>
       </div>
     </nav>
   );
