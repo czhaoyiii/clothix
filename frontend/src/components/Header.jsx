@@ -83,7 +83,7 @@ export default function Header() {
                   Order
                 </p>
                 <a
-                  href="https://clothix-adminpanel.vercel.app/"
+                  href="https://clothix-admin.vercel.app/"
                   target="_blank"
                   className="cursor-pointer hover:text-black"
                 >
