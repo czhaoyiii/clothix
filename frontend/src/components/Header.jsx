@@ -150,7 +150,7 @@ export default function Header() {
             onClick={() => setVisible(false)}
             to="contact"
           >
-            Contact
+            CONTACT
           </NavLink>
         </div>
       </div>
